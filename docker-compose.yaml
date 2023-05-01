@@ -1,0 +1,46 @@
+# ./docker-compose.yml
+
+version: '3'
+
+services:
+  db:
+    build:
+      context: ./
+      dockerfile: Dockerfile.mysql
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "centrodiscusion"
+    ports:
+      - "2306:3306"
+    restart: always
+    networks:
+      mired:
+        ipv4_address: 192.168.100.11
+    volumes:
+      - ./database/:/var/lib/mysql
+
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile.php
+    container_name: web
+    depends_on:
+      - db
+    volumes:
+      - ./webserver/:/var/www/html/
+    ports:
+      - "8100:80"
+    restart: always
+    networks:
+      mired:
+        ipv4_address: 192.168.100.12
+    stdin_open: true
+    tty: true
+
+networks:
+  mired:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.100.0/24"
