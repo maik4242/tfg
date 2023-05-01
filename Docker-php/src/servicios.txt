@@ -1,0 +1,11 @@
+//insertamos un par de servicios
+$consulta="INSERT INTO servicios(nombreS,descripcionS,precio5,precio10,precio15) VALUES ('Charla cordial','Conversación tranquila, apacible y coloquial',5,7,9);";
+$ejecutar_consulta=mysqli_query($conexion,$consulta);
+$consulta="INSERT INTO servicios(nombreS,descripcionS,precio5,precio10,precio15) VALUES ('Discusión pacífica','Lo que vendría siendo un debate formal',7,9,11);";
+$ejecutar_consulta=mysqli_query($conexion,$consulta);
+$consulta="INSERT INTO servicios(nombreS,descripcionS,precio5,precio10,precio15) VALUES ('Discusión acalorada','Tono más endurecido',9,11,13);";
+$ejecutar_consulta=mysqli_query($conexion,$consulta);
+$consulta="INSERT INTO servicios(nombreS,descripcionS,precio5,precio10,precio15) VALUES ('Discusión subida de tono','Puede aparecer algún que otro insulto',11,13,15);";
+$ejecutar_consulta=mysqli_query($conexion,$consulta);
+$consulta="INSERT INTO servicios(nombreS,descripcionS,precio5,precio10,precio15) VALUES ('A por todas','Esto ya es algo más próximo a la berrea',13,15,17);";
+$ejecutar_consulta=mysqli_query($conexion,$consulta);

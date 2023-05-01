@@ -1,0 +1,214 @@
+/*Declaracion de variables*/
+:root {
+	--color-base:rgba(17, 90, 80, 1.0) ;
+	--color-base-trans: rgba(17, 90, 80, 0.70);
+	--color-base-trans-mas: rgba(17, 90, 80, 0.50);
+	--color-base-trans-mas-mas: rgba(17, 90, 80, 0.20);
+	--negro: rgba(0, 0, 0, 1.0);
+	--negro-trans: rgba(0, 0, 0, 0.80);
+	--gris: rgba(202, 207, 210, 1.0);
+	--blanco: rgba(255, 255, 255, 1.0);
+}
+
+/*Estilo para todo el cuerpo*/
+body {
+	font-size: 1.5vw;
+	font-family: Arial;
+	background-color: var(--color-base-trans-mas-mas);
+}
+
+/*Estilo para la cabecera (header)*/
+header {
+	font-family: Algerian;
+	font-size: x-large;
+	text-align: center;
+	text-shadow: 2px 2px var(--blanco);
+	clear: both;
+	width: 100%;
+	background-color:var(--color-base);
+	padding-top: 70px;
+	padding-bottom: 20px;
+}
+
+/*Estilo para el logo grande de la cabecera*/
+img.logoGrande {
+	width: 15%;
+	height: auto;
+	border-radius: 100px;
+	border-style: solid;
+	border-color: white;
+	margin-top: 10px;
+	transition: border-radius 2s ease, 
+				border-style 2s ease; 
+}
+img.logoGrande:hover {
+	border-radius: 0px;
+	border-style: dotted;
+	border-color: white;
+	margin-top: 10px;
+}
+
+/*Estilo para el menu (nav)*/
+nav {
+	overflow: hidden;
+	position: fixed;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	top: 0;
+	left: 0;
+	width: 99%;
+	letter-spacing: 1.5px;
+	clear: both;
+	background-color:var(--negro);
+	padding: 8px;
+	box-shadow: 5px 5px 10px #8F9598;
+}
+nav a {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	padding: 10px 10px 10px 10px;
+}
+nav a:hover {
+	background: var(--gris);
+	color: var(--negro);
+}
+
+/*Para ocultar el boton de Inicio (es redundante con el logo pequenio)*/
+.ocGlobal {
+	display: none;
+}
+
+/*Estilo para el logo pequenio del menu (nav)*/
+img.logito{
+	width: 45px;
+	height: auto;
+	align-items: left;
+	border-style: solid;
+	border-color: white;
+}
+
+/*Estilo para el contenedor de los articulos*/
+main {
+	margin-top: 8px;
+}
+
+/*Estilo para el Formulario (unico articulo que hay)*/
+.verticalCentrado {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+/*Estilo para las cabeceras de los articulos*/
+article h1 {
+	display: flex;
+	justify-content: center;
+	font-family: Castellar;
+	text-align: center;
+	background-color: var(--color-base-trans);
+	clear: both;
+	width: 100%;
+	border-radius: 75px;
+	padding: 10px 0px 10px 0px;
+}
+
+/*Estilo para darle color "base" al formulario, en este caso
+	las checkbox de los terminos*/
+form {
+	accent-color: var(--color-base);
+}
+
+/*Estilo para los checkbox
+	se utilizan clases porque no es unico*/
+.casilla {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+/*Estilo para los botones de Aceptar y Limpiar
+	se utilizan clases porque no es unico*/
+.boton {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: justify;
+	text-align: center;
+}
+
+/*Estilo boton Aceptar y enviar*/
+input[type="submit"] {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	font-size: large;
+	letter-spacing: 1px;
+	word-spacing: 1px;
+	cursor: pointer;
+	padding: 10px 5px 10px 5px;
+}
+input[type="submit"]:hover  {
+	border-radius: 80px;
+	background-color: rgba(49, 237, 86, 1.0); /*verde*/
+}
+
+/*Estilo boton Limpiar formulario*/
+input[type="reset"] {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	font-size: large;
+	letter-spacing: 1px;
+	word-spacing: 1px;
+	cursor: pointer;
+	padding: 10px 5px 10px 5px;
+}
+input[type="reset"]:hover  {
+	border-radius: 80px;
+	background-color: rgba(243, 24, 24, 1.0); /*rojo*/
+}
+
+/*Estilo para el pie (footer)*/
+footer {
+	overflow: hidden;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	bottom: 0;
+	left: 0;
+	width: 99%;
+	text-align: center;
+	letter-spacing: 1.5px;
+	clear: both;
+	background-color:var(--negro);
+	padding: 8px;
+}
+footer a {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	padding: 10px 10px 10px 10px;
+}
+footer a:hover {
+	background: var(--gris);
+	color: var(--negro);
+}
